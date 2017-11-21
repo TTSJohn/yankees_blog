@@ -1,0 +1,21 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blogHeader {
+	background: #1c2841;
+	text-align: center;
+	color: white;
+}
+
+.blogBody {
+	background: #1c2841;
+	text-align: center;
+	color: white;
+}
+
+.blogBorder {
+	border-bottom-style: solid;
+    border-bottom-width: medium;
+    border-bottom-color: #1c2841;
+}

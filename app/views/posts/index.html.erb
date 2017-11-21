@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="blogHeader">What You Need to Know</h1>
+
+<div class="blogBody">
+  <div class="row">
+    <div class="col-md-4">
+      Title
+    </div>
+    <div class="col-md-6">
+      Entry
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class="col-md-4">
+         <p><%= post.title %> </p>
+      </div>
+      <div class="col-md-6">
+         <p><%= post.blog_entry %></p>
+      </div>
+       <div class="col-md-2">
+            <p>
+            <%= link_to 'Show', post %>
+          <% if can? :update, post %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+            </p>
+      </div>
+    <% end %>
+  </div>
+</div>  
+<%= link_to 'New Post', new_post_path, class: "btn btn" %>
+
+
