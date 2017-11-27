@@ -18,6 +18,7 @@
     <% @posts.each do |post| %>
       <div class="col-md-4">
          <p><%= post.title %> </p>
+         <p>by <%= post.user.username %></p>
       </div>
       <div class="col-md-6">
          <p><%= post.blog_entry %></p>
