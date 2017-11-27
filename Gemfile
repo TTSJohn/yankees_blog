@@ -34,6 +34,8 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'devise'
+gem 'figaro'
+gem 'carrierwave'
 gem 'cancancan'
 
 # Use Capistrano for deployment

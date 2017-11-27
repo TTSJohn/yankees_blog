@@ -1,30 +1,23 @@
 <p id="notice"><%= notice %></p>
-
+<div class="blogEntire">
 <h1 class="blogHeader">What You Need to Know</h1>
 
-<div class="blogBody">
-  <div class="row">
-    <div class="col-md-4">
-      Title
-    </div>
-    <div class="col-md-6">
-      Entry
-    </div>
-    <div class="col-md-2">
-    </div>
-  </div>
 
-  <div class="row">
+
+<div class="row">
     <% @posts.each do |post| %>
-      <div class="col-md-4">
+
+
+  <h1 class="blogTitle">
          <p><%= post.title %> </p>
-         <p>by <%= post.user.username %></p>
-      </div>
-      <div class="col-md-6">
-         <p><%= post.blog_entry %></p>
-      </div>
-       <div class="col-md-2">
-            <p>
+  <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-body blogText"> 
+      <p><%= post.blog_entry %></p>
+      <p>by <%= post.author %></p>
+    </div>
+      <div class="panel-footer blogFooter">
+       <p>
             <%= link_to 'Show', post %>
           <% if can? :update, post %>
             <%= link_to 'Edit', edit_post_path(post) %>
@@ -32,6 +25,9 @@
           <% end %>
             </p>
       </div>
+  </div>
+</div>
+</div>           
     <% end %>
   </div>
 </div>  
