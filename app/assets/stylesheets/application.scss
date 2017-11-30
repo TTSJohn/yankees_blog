@@ -16,15 +16,16 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-.container {
+body {
+
 	background: #1c2841;
+}
+
+.container {
 	color: white;
-	margin: 0px;
-	padding: 0px;
 }
 
 .navColor {
-	background: #1c2841;
 	color: white;
 }
 
